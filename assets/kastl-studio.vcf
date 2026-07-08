@@ -1,10 +1,13 @@
 BEGIN:VCARD
 VERSION:3.0
-N:Kasl;Jan Martin;;;
-FN:Jan Martin Kasl
-ORG:Kastl Studio
+N:Kasl;Jan Martin;;;Bc.
+FN:Bc. Jan Martin Kasl
+ORG:3D Kastl Studio
 TITLE:3D skenování a FDM tisk
+TEL;TYPE=CELL:+420705903725
 EMAIL;TYPE=INTERNET:3dkastlstudio@gmail.com
-URL:https://kastlstudio.eu
+URL:https://3dkastlstudio.eu
+X-SOCIALPROFILE;type=instagram:https://www.instagram.com/3dkastlstudio/
+X-SOCIALPROFILE;type=facebook:https://www.facebook.com/3dkastlstudio/
 NOTE:B2B & Výroba | Historie & Kultura | Domácnost & Hobby
 END:VCARD

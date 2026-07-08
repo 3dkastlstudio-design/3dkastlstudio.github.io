@@ -721,7 +721,6 @@ section.block.tight { padding: 48px 0; }
   overflow: hidden;
   margin: 48px 0 0;
 }
-
 .accordion-trigger {
   width: 100%;
   background: var(--c-paper-dim);
@@ -738,152 +737,145 @@ section.block.tight { padding: 48px 0; }
   transition: background 0.15s ease;
   gap: 12px;
 }
-
-.accordion-trigger:hover {
-  background: var(--c-blue-pale);
-}
-
+.accordion-trigger:hover { background: var(--c-blue-pale); }
 .accordion-trigger .acc-icon {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  position: relative;
-  border: 1.5px solid var(--c-blue);
-  border-radius: 50%;
+  width: 20px; height: 20px; flex-shrink: 0; position: relative;
+  border: 1.5px solid var(--c-blue); border-radius: 50%;
   transition: transform 0.25s ease;
 }
-
 .accordion-trigger .acc-icon::before,
 .accordion-trigger .acc-icon::after {
-  content: '';
-  position: absolute;
-  background: var(--c-blue);
-  border-radius: 2px;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
+  content: ''; position: absolute; background: var(--c-blue);
+  border-radius: 2px; top: 50%; left: 50%; transform: translate(-50%, -50%);
 }
 .accordion-trigger .acc-icon::before { width: 10px; height: 1.5px; }
 .accordion-trigger .acc-icon::after  { width: 1.5px; height: 10px; transition: transform 0.25s ease, opacity 0.25s ease; }
-
-.accordion[open] .accordion-trigger .acc-icon::after {
-  transform: translate(-50%, -50%) rotate(90deg);
-  opacity: 0;
-}
-
-.accordion-body {
-  border-top: 0.5px solid var(--c-gray-light);
-  padding: 32px 24px;
-  background: var(--c-paper);
-}
-
-/* Ceník tabulka uvnitř accordionu */
-.price-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 14px;
-  margin-bottom: 24px;
-}
-
-.price-table caption {
-  text-align: left;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: var(--c-gray);
-  padding: 0 0 8px;
-  text-transform: uppercase;
-}
-
-.price-table th {
-  background: var(--c-ink);
-  color: var(--c-paper);
-  padding: 9px 12px;
-  text-align: left;
-  font-weight: 600;
-  font-size: 13px;
-}
-
-.price-table td {
-  padding: 9px 12px;
-  border-bottom: 0.5px solid var(--c-gray-light);
-  color: var(--c-ink-soft);
-  vertical-align: top;
-}
-
+.accordion[open] .accordion-trigger .acc-icon::after { transform: translate(-50%, -50%) rotate(90deg); opacity: 0; }
+.accordion-body { border-top: 0.5px solid var(--c-gray-light); padding: 32px 24px; background: var(--c-paper); }
+.price-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 24px; }
+.price-table caption { text-align: left; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: var(--c-gray); padding: 0 0 8px; text-transform: uppercase; }
+.price-table th { background: var(--c-ink); color: var(--c-paper); padding: 9px 12px; text-align: left; font-weight: 600; font-size: 13px; }
+.price-table td { padding: 9px 12px; border-bottom: 0.5px solid var(--c-gray-light); color: var(--c-ink-soft); vertical-align: top; }
 .price-table tr:nth-child(even) td { background: var(--c-paper-dim); }
-
-.price-table .price-val {
-  font-weight: 700;
-  color: var(--c-blue);
-  white-space: nowrap;
-}
-
-.price-table .price-note {
-  font-size: 12.5px;
-  color: var(--c-gray);
-  font-style: italic;
-}
-
-.price-footnote {
-  font-size: 12.5px;
-  color: var(--c-gray);
-  font-style: italic;
-  line-height: 1.6;
-  border-top: 0.5px solid var(--c-gray-light);
-  padding-top: 16px;
-  margin-top: 8px;
-}
-
-/* Cenotvorba — navigační boxy */
-.pricing-nav {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 32px;
-}
-
-.pricing-nav-card {
-  flex: 1;
-  min-width: 180px;
-  padding: 20px 24px;
-  border: 0.5px solid var(--c-gray-light);
-  border-radius: var(--radius);
-  text-decoration: none;
-  color: var(--c-ink);
-  background: var(--c-paper-dim);
-  transition: border-color 0.15s ease, background 0.15s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.pricing-nav-card:hover {
-  border-color: var(--c-blue);
-  background: var(--c-blue-pale);
-}
-
-.pricing-nav-card .pnc-label {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--c-blue);
-}
-
-.pricing-nav-card .pnc-title {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--c-ink);
-}
-
-.pricing-nav-card .pnc-desc {
-  font-size: 13px;
-  color: var(--c-gray);
-}
-
+.price-table .price-val { font-weight: 700; color: var(--c-blue); white-space: nowrap; }
+.price-table .price-note { font-size: 12.5px; color: var(--c-gray); font-style: italic; }
+.price-footnote { font-size: 12.5px; color: var(--c-gray); font-style: italic; line-height: 1.6; border-top: 0.5px solid var(--c-gray-light); padding-top: 16px; margin-top: 8px; }
+.pricing-nav { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
+.pricing-nav-card { flex: 1; min-width: 180px; padding: 20px 24px; border: 0.5px solid var(--c-gray-light); border-radius: var(--radius); text-decoration: none; color: var(--c-ink); background: var(--c-paper-dim); transition: border-color 0.15s ease, background 0.15s ease; display: flex; flex-direction: column; gap: 6px; }
+.pricing-nav-card:hover { border-color: var(--c-blue); background: var(--c-blue-pale); }
+.pricing-nav-card .pnc-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-blue); }
+.pricing-nav-card .pnc-title { font-size: 15px; font-weight: 600; color: var(--c-ink); }
+.pricing-nav-card .pnc-desc { font-size: 13px; color: var(--c-gray); }
+.hero-photo .btn-primary { border-color: rgba(250,250,248,0.45); }
+.hero-photo .btn-primary:hover { border-color: #FAFAF8; }
 @media (max-width: 680px) {
   .accordion-trigger { padding: 14px 16px; font-size: 14px; }
   .accordion-body { padding: 20px 16px; }
   .price-table th, .price-table td { padding: 8px 10px; font-size: 13px; }
   .pricing-nav { flex-direction: column; }
+}
+
+/* ===========================================================
+   MOBILNÍ NAVIGACE — hamburger
+=========================================================== */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.nav-toggle span {
+  display: block;
+  height: 1.5px;
+  background: var(--c-ink);
+  border-radius: 2px;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+  transform-origin: center;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+@media (max-width: 680px) {
+  /* Header layout */
+  .site-header .wrap { position: relative; }
+  .nav-toggle { display: flex; }
+
+  /* Mobilní menu — skryté */
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0; right: 0;
+    background: var(--c-paper);
+    border-bottom: 1px solid var(--c-line);
+    padding: 0;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+  .main-nav.is-open {
+    max-height: 400px;
+    padding: 8px 0 16px;
+  }
+  .main-nav a {
+    padding: 12px 24px;
+    font-size: 15px;
+    border-bottom: none;
+  }
+  .main-nav a.active::after { display: none; }
+  .main-nav a.active { color: var(--c-blue); font-weight: 600; }
+
+  /* Hero */
+  .hero { height: auto; min-height: 320px; padding: 48px 0 40px; }
+  .page-title { font-size: 26px !important; }
+  .page-lead { font-size: 14px; }
+
+  /* Sekce */
+  section.block { padding: 36px 0; }
+  .section-head h2 { font-size: 22px; }
+
+  /* Kontaktní formulář grid → jeden sloupec */
+  .wrap[style*="grid-template-columns"] {
+    display: block !important;
+  }
+  .contact-info { margin-top: 40px; }
+
+  /* Profil foto → skrýt nebo dát pod text */
+  [style*="display: flex"][style*="align-items: flex-start"] {
+    flex-direction: column !important;
+  }
+
+  /* Tabulky ceníku — scrollovatelné */
+  .accordion-body { padding: 16px 12px; overflow-x: auto; }
+  .price-table { font-size: 12.5px; min-width: 480px; }
+  .price-table th, .price-table td { padding: 7px 8px; }
+
+  /* CTA strip */
+  .cta-strip h2 { font-size: 20px; }
+  .cta-strip .btn { width: 100%; justify-content: center; }
+
+  /* Pricing nav karty */
+  .pricing-nav { flex-direction: column; }
+
+  /* o-nas obrázky */
+  .img-placeholder { aspect-ratio: 4/3; }
+}
+
+@media (max-width: 400px) {
+  .page-title { font-size: 22px !important; }
+  .hero { min-height: 280px; padding: 40px 0 32px; }
+  .wrap { padding: 0 16px; }
 }
